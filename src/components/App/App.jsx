@@ -4,8 +4,8 @@ import Loader from '../Loader';
 import { Suspense } from 'react';
 import MainContainer from 'components/MainContainer/MainContainer';
 import { GlobalStyle } from 'common/GlobalStyle';
-import PizzaPage from '../../pages/CartPage';
-import CartPage from '../../pages/PizzaPage';
+import PizzaPage from '../../pages/PizzaPage';
+import CartPage from '../../pages/CartPage';
 
 export default function App() {
   return (

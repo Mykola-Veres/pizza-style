@@ -1,7 +1,11 @@
+import Header from 'components/Header/Header';
+import { ReturnToLessonBoardstyled } from './PizzaPageStaled';
+
 export default function PizzaPage() {
   return (
     <>
-      <div>PizzaPage</div>
+      <Header />
+      <ReturnToLessonBoardstyled>Pizza Page</ReturnToLessonBoardstyled>
     </>
   );
 }

@@ -5,4 +5,5 @@ export const ReturnToLessonBoardstyled = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: red;
 `;

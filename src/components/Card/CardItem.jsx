@@ -1,3 +1,4 @@
+import Button from 'components/Button/Button';
 import {
   CardImgStyle,
   CardImgWrapperStyle,
@@ -16,6 +17,7 @@ function CardItem({ product: { description, image, title, price } }) {
       </CardImgWrapperStyle>
       <CardTextStyle>{description}</CardTextStyle>
       <CardPriceStyle>Price: {price} UAH</CardPriceStyle>
+      <Button color={'red'}>Add to cart</Button>
     </CardItemStyle>
   );
 }

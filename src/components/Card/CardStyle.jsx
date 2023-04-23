@@ -6,8 +6,8 @@ export const CardListStyle = styled.ul`
   grid-template-rows: repeat(3, 1fr);
   /* grid-template-columns: repeat(3, 30%);
   grid-template-rows: repeat(3, 300px); */
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   justify-content: center;
   align-content: center;
 `;
@@ -34,20 +34,29 @@ export const CardImgStyle = styled.img`
   object-fit: cover;
 `;
 
+export const CardTitleStyle = styled.h3`
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+  margin-bottom: 10px;
+`;
+
 export const CardTextStyle = styled.p`
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
-`;
-
-export const CardTitleStyle = styled.p`
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
+  width: 220px;
+  margin-bottom: 10px;
+  font-style: italic;
 `;
 
 export const CardPriceStyle = styled.p`
   margin-left: auto;
   margin-right: auto;
   width: 200px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.3px;
+  color: #130a90;
+  margin-bottom: 10px;
 `;

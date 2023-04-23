@@ -7,6 +7,7 @@ export const HeaderContainerStyle = styled.header`
   color: whitesmoke;
   border: 1px solid #fff;
   user-select: none;
+  margin-bottom: 20px;
   :hover {
     text-shadow: 0px 0px 5px wheat;
     border-bottom: 1px solid wheat;

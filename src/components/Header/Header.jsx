@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import { useSelector } from 'react-redux';
 import {
   HeaderContainerStyle,
   HeaderNavContainerStyle,
@@ -7,8 +8,11 @@ import {
   LinkToPizzaPageStyled,
 } from './HeaderStyled';
 import { Icon } from '@iconify/react';
+import TotalCount from '../TotalCount/TotalCount';
 
 export default function Header() {
+  const pizzas = useSelector(state => state.cart.pizzasInCart);
+
   return (
     <HeaderContainerStyle>
       <HeaderNavContainerStyle>
@@ -31,6 +35,7 @@ export default function Header() {
           </li>
           <li>
             <LinkToPizzaPageStyled to={'/cart'}>
+              <TotalCount pizzas={pizzas}></TotalCount>
               <Icon icon="bi:cart3" width={15} />
             </LinkToPizzaPageStyled>
           </li>

@@ -16,28 +16,17 @@ export const ButtonStyled = styled.button`
   font-style: italic;
 `;
 
-export const ButtonPlusMinusStyled = styled.button`
-  border-radius: 50%;
-  padding: 10px 14px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: #fdfdfd;
-  background-color: #dc9640;
-  border-color: transparent;
-  cursor: pointer;
-  margin-right: 5px;
-  :hover {
-    background-color: #139652;
-  }
+export const ButtonAnOrderWraperStyled = styled.div`
+  text-align: center;
 `;
 
-export const ButtonMinusStyled = styled.button`
-  border-radius: 50%;
-  padding: 10px 16px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+export const ButtonAnOrderStyled = styled.button`
+  border-radius: 12px;
+  padding: 12px 30px;
+  transition: background-color 0.3s;
   color: #fdfdfd;
-  cursor: pointer;
-  border-color: transparent;
   background-color: #dc9640;
+  cursor: pointer;
   :hover {
     background-color: #139652;
   }

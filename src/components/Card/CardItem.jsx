@@ -8,16 +8,18 @@ import {
   CardTitleStyle,
 } from './CardStyle';
 
-function CardItem({ product: { description, image, title, price } }) {
+function CardItem({ product, btnShow }) {
   return (
     <CardItemStyle>
-      <CardTitleStyle>{title}</CardTitleStyle>
+      <CardTitleStyle>{product.title}</CardTitleStyle>
       <CardImgWrapperStyle>
-        <CardImgStyle src={image} alt="pizza" />
+        <CardImgStyle src={product.image} alt="pizza" />
       </CardImgWrapperStyle>
-      <CardTextStyle>{description}</CardTextStyle>
-      <CardPriceStyle>Price: {price} UAH</CardPriceStyle>
-      <Button color={'red'}>Add to cart</Button>
+      <CardTextStyle>{product.description}</CardTextStyle>
+      <CardPriceStyle>Price: {product.price} UAH</CardPriceStyle>
+      <Button color={'red'} product={product} btnShow={btnShow}>
+        Add to cart
+      </Button>
     </CardItemStyle>
   );
 }

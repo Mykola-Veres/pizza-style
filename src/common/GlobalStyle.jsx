@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
-
 body {
     box-sizing: border-box;
     width: 100vw;
@@ -50,5 +49,4 @@ a {
     -webkit-appearance: none;
     margin: 0;
     }
-
 `;

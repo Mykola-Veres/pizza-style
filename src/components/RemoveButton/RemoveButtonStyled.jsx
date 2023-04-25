@@ -14,5 +14,6 @@ export const ButtonAnOrderStyled = styled.button`
   cursor: pointer;
   :hover {
     background-color: ${theme.colors.secondary};
+    border-color: #b70d0d;
   }
 `;

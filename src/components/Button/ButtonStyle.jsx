@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../common/Theme';
 
 export const ButtonStyled = styled.button`
   background-color: ${props => (props.color ? props.color : '#fff')};
@@ -9,7 +10,8 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
   transition: background-color 0.3s;
   &:hover {
-    background-color: ${props => (props.color ? '#fff' : '#8eea95')};
+    background-color: ${props =>
+      props.color ? theme.colors.white : theme.colors.secondary};
     color: ${props => (props.color ? props.color : '#431da2')};
   }
   font-weight: 600;
@@ -21,12 +23,12 @@ export const ButtonPlusMinusStyled = styled.button`
   padding: 10px 14px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #fdfdfd;
-  background-color: #dc9640;
+  background-color: ${theme.colors.primary};
   border-color: transparent;
   cursor: pointer;
   margin-right: 5px;
   :hover {
-    background-color: #139652;
+    background-color: ${theme.colors.secondary};
   }
 `;
 
@@ -37,8 +39,8 @@ export const ButtonMinusStyled = styled.button`
   color: #fdfdfd;
   cursor: pointer;
   border-color: transparent;
-  background-color: #dc9640;
+  background-color: ${theme.colors.primary};
   :hover {
-    background-color: #139652;
+    background-color: ${theme.colors.secondary};
   }
 `;

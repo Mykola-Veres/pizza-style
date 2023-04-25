@@ -1,3 +1,4 @@
+import { theme } from 'common/Theme';
 import styled from 'styled-components';
 
 export const TotalPriceStyled = styled.p`
@@ -6,7 +7,7 @@ export const TotalPriceStyled = styled.p`
   margin-top: 20px;
   padding-bottom: 50px;
   font-style: italic;
-  font-size: 26px;
+  font-size: ${theme.sizes.large};
   line-height: 30px;
   color: #0f3b0c;
 `;

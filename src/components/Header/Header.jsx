@@ -1,45 +1,31 @@
-import Logo from './Logo';
-import { useSelector } from 'react-redux';
 import {
   HeaderContainerStyle,
   HeaderNavContainerStyle,
   HeaderListStyle,
-  LogoStyle,
-  LinkToPizzaPageStyled,
+  HeaderItemStyled,
 } from './HeaderStyled';
-import { Icon } from '@iconify/react';
-import TotalCount from '../TotalCount/TotalCount';
+import NavLinkPizza from 'components/NavLinkPizza/NavLinkPizza';
+import LogoPizza from 'components/LogoPizza/LogoPizza';
+import CartHeader from 'components/CartHeader/CartHeader';
 
 export default function Header() {
-  const pizzas = useSelector(state => state.cart.pizzasInCart);
-
   return (
     <HeaderContainerStyle>
       <HeaderNavContainerStyle>
+        <LogoPizza to={'/'} />
         <HeaderListStyle>
-          <li>
-            <LogoStyle to={'/'}>
-              <Logo />
-            </LogoStyle>
-          </li>
-
-          <li>
-            <LinkToPizzaPageStyled to={'/'}>
+          <HeaderItemStyled>
+            <NavLinkPizza to={'/'} activeclassname="active">
               <p>Pizza Page</p>
-            </LinkToPizzaPageStyled>
-          </li>
-          <li>
-            <LinkToPizzaPageStyled to={'/cart'}>
+            </NavLinkPizza>
+          </HeaderItemStyled>
+          <HeaderItemStyled>
+            <NavLinkPizza to={'/cart'} activeclassname="active">
               <p>Cart Page</p>
-            </LinkToPizzaPageStyled>
-          </li>
-          <li>
-            <LinkToPizzaPageStyled to={'/cart'}>
-              <TotalCount pizzas={pizzas}></TotalCount>
-              <Icon icon="bi:cart3" width={15} />
-            </LinkToPizzaPageStyled>
-          </li>
+            </NavLinkPizza>
+          </HeaderItemStyled>
         </HeaderListStyle>
+        <CartHeader />
       </HeaderNavContainerStyle>
     </HeaderContainerStyle>
   );

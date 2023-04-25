@@ -37,10 +37,21 @@ const cartSlice = createSlice({
       state.pizzasInCart = [];
       state.totalPrice = 0;
     },
+    removePizzaFromCart: (state, action) => {
+      const findPizza = state.pizzasInCart.find(
+        pizza => pizza.id === action.payload.id
+      );
+      state.totalPrice -= action.payload.price * findPizza.count;
+      findPizza.count = 0;
+    },
   },
 });
 
-export const { setPizzaInCart, deletePizzaFromCart, clearPizzasInCart } =
-  cartSlice.actions;
+export const {
+  setPizzaInCart,
+  deletePizzaFromCart,
+  clearPizzasInCart,
+  removePizzaFromCart,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

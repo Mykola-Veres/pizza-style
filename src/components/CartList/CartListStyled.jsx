@@ -15,26 +15,30 @@ export const CardItemStyle = styled.li`
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  /* :hover {
-    transform: scale(1.02);
-  } */
+  :hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.2),
+      0px 1px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
 `;
 
 export const CardImgWrapperStyle = styled.div`
   width: 150px;
   height: 150px;
-  box-shadow: inset 0 0 5px 5px white;
   margin-bottom: 10px;
   margin-top: 10px;
   grid-area: 1 / 1 / 4 / 4;
 `;
 
 export const CardImgStyle = styled.img`
-  position: relative;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
+  border-radius: 8px;
+  width: 95%;
+  height: 95%;
   object-fit: cover;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${CardItemStyle}:hover & {
+    transform: scale(1.07);
+  }
 `;
 
 export const CardTitleStyle = styled.h3`

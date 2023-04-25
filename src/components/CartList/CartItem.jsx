@@ -9,6 +9,7 @@ import {
   PizzaCountStyled,
 } from './CartListStyled';
 import { useSelector } from 'react-redux';
+import RemoveButton from 'components/RemoveButton/RemoveButton';
 
 function CardItem({ pizza, btnShow }) {
   const pizzas = useSelector(state => state.cart.pizzasInCart);
@@ -27,6 +28,7 @@ function CardItem({ pizza, btnShow }) {
             Add to cart
           </Button>
           <PizzaCountStyled>{pizzaItem.count}</PizzaCountStyled>
+          <RemoveButton pizza={pizza} />
         </CardItemStyle>
       )}
     </>

@@ -1,14 +1,17 @@
 import Header from 'components/Header/Header';
 import CardList from 'components/Card/CardList';
-import { PizzaPageConteinerStyled } from './PizzaPageStaled';
+import {
+  PizzaConteinerStyled,
+  PizzaPageConteinerStyled,
+} from './PizzaPageStaled';
 
 export default function PizzaPage() {
   return (
-    <>
+    <PizzaConteinerStyled>
       <Header />
       <PizzaPageConteinerStyled>
         <CardList />
       </PizzaPageConteinerStyled>
-    </>
+    </PizzaConteinerStyled>
   );
 }

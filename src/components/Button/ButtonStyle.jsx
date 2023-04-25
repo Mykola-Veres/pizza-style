@@ -16,6 +16,7 @@ export const ButtonStyled = styled.button`
   }
   font-weight: 600;
   font-style: italic;
+  margin-bottom: 8px;
 `;
 
 export const ButtonPlusMinusStyled = styled.button`
@@ -27,6 +28,7 @@ export const ButtonPlusMinusStyled = styled.button`
   border-color: transparent;
   cursor: pointer;
   margin-right: 5px;
+  margin-bottom: 8px;
   :hover {
     background-color: ${theme.colors.secondary};
   }
@@ -40,6 +42,7 @@ export const ButtonMinusStyled = styled.button`
   cursor: pointer;
   border-color: transparent;
   background-color: ${theme.colors.primary};
+  margin-bottom: 8px;
   :hover {
     background-color: ${theme.colors.secondary};
   }

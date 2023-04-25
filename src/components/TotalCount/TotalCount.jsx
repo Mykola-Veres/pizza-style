@@ -1,5 +1,13 @@
+import { TotalCountStyled } from './TotalCountStyled';
+
 export default function TotalCount({ pizzas }) {
   const totalCount = pizzas.reduce((acc, pizza) => acc + pizza.count, 0);
 
-  return <>{pizzas.length > 0 ? <div>{totalCount}</div> : null}</>;
+  return (
+    <>
+      {totalCount === 0 ? null : (
+        <TotalCountStyled>{totalCount}</TotalCountStyled>
+      )}
+    </>
+  );
 }

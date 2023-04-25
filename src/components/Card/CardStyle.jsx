@@ -2,12 +2,20 @@ import styled from 'styled-components';
 
 export const CardListStyle = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 0.7fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   justify-content: center;
   align-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 `;
 
 export const CardItemStyle = styled.li`
@@ -21,12 +29,15 @@ export const CardItemStyle = styled.li`
 `;
 
 export const CardImgWrapperStyle = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   margin-bottom: 15px;
-  grid-area: 1 / 1 / 4 / 4;
   margin-left: auto;
   margin-right: auto;
+  @media (min-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 export const CardImgStyle = styled.img`

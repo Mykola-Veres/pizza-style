@@ -17,7 +17,7 @@ function CardItem({ product, btnShow }) {
       </CardImgWrapperStyle>
       <CardTextStyle>{product.description}</CardTextStyle>
       <CardPriceStyle>Price: {product.price} UAH</CardPriceStyle>
-      <Button color={'red'} product={product} btnShow={btnShow}>
+      <Button product={product} btnShow={false}>
         Add to cart
       </Button>
     </CardItemStyle>

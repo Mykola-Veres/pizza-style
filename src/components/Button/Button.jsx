@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {
+  ButtonConteinerStyled,
   ButtonMinusStyled,
   ButtonPlusMinusStyled,
   ButtonStyled,
@@ -8,14 +9,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deletePizzaFromCart, setPizzaInCart } from 'redux/cart/reducer';
 
 export default function Button(props) {
-  const [color, setColor] = useState(false);
   const [btnShow, setBtnShow] = useState(props.btnShow);
   const dispatch = useDispatch();
   const pizzas = useSelector(state => state.cart.pizzasInCart);
   const isPizzaInCarts = pizzas.find(pizza => pizza.id === props.product.id);
 
   const handleClick = () => {
-    setColor(!color);
     setBtnShow(true);
     dispatch(setPizzaInCart(props.product));
   };
@@ -34,16 +33,14 @@ export default function Button(props) {
   return (
     <>
       {btnShow ? (
-        <>
+        <ButtonConteinerStyled>
           <ButtonPlusMinusStyled onClick={handleClickPlus}>
             +
           </ButtonPlusMinusStyled>
           <ButtonMinusStyled onClick={handleClickMinus}>-</ButtonMinusStyled>
-        </>
+        </ButtonConteinerStyled>
       ) : (
-        <ButtonStyled color={color ? props.color : null} onClick={handleClick}>
-          {props.children}
-        </ButtonStyled>
+        <ButtonStyled onClick={handleClick}>{props.children}</ButtonStyled>
       )}
     </>
   );

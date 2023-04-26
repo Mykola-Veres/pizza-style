@@ -21,8 +21,6 @@ export const HeaderNavContainerStyle = styled.nav`
     justify-content: space-around;
     align-items: center;
   }
-  @media (min-width: 1280px) {
-  }
 `;
 
 export const HeaderListStyle = styled.ul`

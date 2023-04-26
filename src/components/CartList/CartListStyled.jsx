@@ -13,21 +13,42 @@ export const CardItemStyle = styled.li`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  :not(:last-child) {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
   :hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.2),
       0px 1px 3px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
   }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    :not(:last-child) {
+      margin-bottom: 0px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const CardImgWrapperStyle = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 10px;
   margin-top: 10px;
-  grid-area: 1 / 1 / 4 / 4;
+  @media (min-width: 768px) {
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+  }
+  @media (min-width: 1280px) {
+    width: 170px;
+    height: 170px;
+  }
 `;
 
 export const CardImgStyle = styled.img`
@@ -43,28 +64,58 @@ export const CardImgStyle = styled.img`
 
 export const CardTitleStyle = styled.h3`
   margin-right: 10px;
-  width: 170px;
+  width: 200px;
+  @media (min-width: 768px) {
+    width: 120px;
+    margin-right: 0px;
+  }
+  @media (min-width: 1280px) {
+    width: 240px;
+  }
 `;
 export const CardTextStyle = styled.p`
-  width: 200px;
+  width: 240px;
   font-style: italic;
+  margin-bottom: 10px;
+  @media (min-width: 768px) {
+    width: 150px;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1280px) {
+    width: 240px;
+  }
 `;
 
 export const CardPriceStyle = styled.p`
-  width: 180px;
+  width: 220px;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.3px;
   color: #130a90;
   font-style: italic;
+  margin-bottom: 10px;
+  @media (min-width: 768px) {
+    width: 100px;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1280px) {
+    width: 190px;
+  }
 `;
 
 export const PizzaCountStyled = styled.div`
-  width: 80px;
   font-style: italic;
   font-size: 22px;
   line-height: 24px;
   font-weight: 600;
   color: #0f3b0c;
+  margin-bottom: 10px;
+  @media (min-width: 768px) {
+    width: 50px;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1280px) {
+    width: 80px;
+  }
 `;

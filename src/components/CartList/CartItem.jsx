@@ -24,7 +24,7 @@ function CardItem({ pizza, btnShow }) {
           </CardImgWrapperStyle>
           <CardTextStyle>{pizza.description}</CardTextStyle>
           <CardPriceStyle>Price: {pizza.price} UAH</CardPriceStyle>
-          <Button color={'red'} product={pizza} btnShow={btnShow}>
+          <Button product={pizza} btnShow={true}>
             Add to cart
           </Button>
           <PizzaCountStyled>{pizzaItem.count}</PizzaCountStyled>

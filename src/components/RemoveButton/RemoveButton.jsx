@@ -1,6 +1,6 @@
 import {
-  ButtonAnOrderStyled,
-  ButtonAnOrderWraperStyled,
+  ButtonRemoveStyled,
+  ButtonRemoveWraperStyled,
 } from './RemoveButtonStyled';
 import { useDispatch } from 'react-redux';
 import { removePizzaFromCart } from 'redux/cart/reducer';
@@ -13,8 +13,8 @@ export default function RemoveButton({ pizza }) {
   };
 
   return (
-    <ButtonAnOrderWraperStyled>
-      <ButtonAnOrderStyled onClick={handleClick}>Remove</ButtonAnOrderStyled>
-    </ButtonAnOrderWraperStyled>
+    <ButtonRemoveWraperStyled>
+      <ButtonRemoveStyled onClick={handleClick}>Remove</ButtonRemoveStyled>
+    </ButtonRemoveWraperStyled>
   );
 }

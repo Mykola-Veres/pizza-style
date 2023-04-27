@@ -13,7 +13,7 @@ export default function Cart() {
     <>
       {totalPrice && pizzas ? (
         <>
-          <CartList pizzas={pizzas} btnShow={true} />
+          <CartList pizzas={pizzas} />
           <TotalPriceStyled>Total: {totalPrice} UAH</TotalPriceStyled>
           <ButtonAnOrder />
         </>

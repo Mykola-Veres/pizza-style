@@ -7,6 +7,7 @@ import {
 } from './ButtonStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { deletePizzaFromCart, setPizzaInCart } from 'redux/cart/reducer';
+import PropTypes from 'prop-types';
 
 export default function Button(props) {
   const [btnShow, setBtnShow] = useState(props.btnShow);
@@ -45,3 +46,7 @@ export default function Button(props) {
     </>
   );
 }
+
+Button.propTypes = {
+  product: PropTypes.object.isRequired,
+};

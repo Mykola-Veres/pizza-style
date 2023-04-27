@@ -1,6 +1,7 @@
 import Cart from 'components/Cart/Cart';
 import Header from 'components/Header/Header';
 import { CartConteinerStyled, CartPageConteinerStyled } from './CartPageStyled';
+import { ToTop } from '../../components/ScrollToTop/ScrollToTop';
 
 export default function CartPage() {
   return (
@@ -9,6 +10,7 @@ export default function CartPage() {
       <CartPageConteinerStyled>
         <Cart />
       </CartPageConteinerStyled>
+      <ToTop />
     </CartConteinerStyled>
   );
 }

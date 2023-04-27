@@ -1,4 +1,4 @@
-export const theme = {
+export const theme = Object.freeze({
   colors: {
     primary: '#ff8800',
     secondary: '#139652',
@@ -10,4 +10,4 @@ export const theme = {
     medium: '20px',
     large: '26px',
   },
-};
+});

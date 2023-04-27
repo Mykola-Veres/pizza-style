@@ -10,8 +10,9 @@ import {
 } from './CartListStyled';
 import { useSelector } from 'react-redux';
 import RemoveButton from 'components/RemoveButton/RemoveButton';
+import PropTypes from 'prop-types';
 
-function CardItem({ pizza, btnShow }) {
+export default function CartItem({ pizza }) {
   const pizzas = useSelector(state => state.cart.pizzasInCart);
   const pizzaItem = pizzas.find(item => item.id === pizza.id);
   return (
@@ -35,4 +36,6 @@ function CardItem({ pizza, btnShow }) {
   );
 }
 
-export default CardItem;
+CartItem.propTypes = {
+  pizza: PropTypes.object.isRequired,
+};

@@ -1,9 +1,10 @@
 import Header from 'components/Header/Header';
-import CardList from 'components/Card/CardList';
+import CardList from 'components/CardPizzaPage/CardList';
 import {
   PizzaConteinerStyled,
   PizzaPageConteinerStyled,
 } from './PizzaPageStaled';
+import { ToTop } from '../../components/ScrollToTop/ScrollToTop';
 
 export default function PizzaPage() {
   return (
@@ -12,6 +13,7 @@ export default function PizzaPage() {
       <PizzaPageConteinerStyled>
         <CardList />
       </PizzaPageConteinerStyled>
+      <ToTop />
     </PizzaConteinerStyled>
   );
 }

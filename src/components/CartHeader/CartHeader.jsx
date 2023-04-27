@@ -8,7 +8,7 @@ export default function CartHeader() {
   return (
     <NavLinkPizza to={'/cart'}>
       <Icon icon="bi:cart3" width={20} />
-      <TotalCount pizzas={pizzas}></TotalCount>
+      <TotalCount pizzas={pizzas} />
     </NavLinkPizza>
   );
 }

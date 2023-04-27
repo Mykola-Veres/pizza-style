@@ -7,8 +7,9 @@ import {
   CardTextStyle,
   CardTitleStyle,
 } from './CardStyle';
+import PropTypes from 'prop-types';
 
-function CardItem({ product, btnShow }) {
+function CardItem({ product }) {
   return (
     <CardItemStyle>
       <CardTitleStyle>{product.title}</CardTitleStyle>
@@ -25,3 +26,7 @@ function CardItem({ product, btnShow }) {
 }
 
 export default CardItem;
+
+CardItem.propTypes = {
+  product: PropTypes.object.isRequired,
+};

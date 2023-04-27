@@ -1,5 +1,6 @@
 import CartItem from './CartItem';
 import { CartListStyle } from './CartListStyled';
+import PropTypes from 'prop-types';
 
 export default function CartList({ pizzas }) {
   return (
@@ -17,3 +18,7 @@ export default function CartList({ pizzas }) {
     </>
   );
 }
+
+CartList.propTypes = {
+  pizzas: PropTypes.array.isRequired,
+};

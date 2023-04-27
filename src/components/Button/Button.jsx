@@ -4,10 +4,13 @@ import {
   ButtonMinusStyled,
   ButtonPlusMinusStyled,
   ButtonStyled,
+  ButtonSvgStyled,
 } from './ButtonStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { deletePizzaFromCart, setPizzaInCart } from 'redux/cart/reducer';
 import PropTypes from 'prop-types';
+import { Plus } from 'assets/Plus';
+import { Minus } from 'assets/Minus';
 
 export default function Button(props) {
   const [btnShow, setBtnShow] = useState(props.btnShow);
@@ -36,9 +39,15 @@ export default function Button(props) {
       {btnShow ? (
         <ButtonConteinerStyled>
           <ButtonPlusMinusStyled onClick={handleClickPlus}>
-            +
+            <ButtonSvgStyled>
+              <Plus />
+            </ButtonSvgStyled>
           </ButtonPlusMinusStyled>
-          <ButtonMinusStyled onClick={handleClickMinus}>-</ButtonMinusStyled>
+          <ButtonMinusStyled onClick={handleClickMinus}>
+            <ButtonSvgStyled>
+              <Minus />
+            </ButtonSvgStyled>
+          </ButtonMinusStyled>
         </ButtonConteinerStyled>
       ) : (
         <ButtonStyled onClick={handleClick}>{props.children}</ButtonStyled>

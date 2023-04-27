@@ -14,7 +14,7 @@ export default function ButtonAnOrder() {
 
   return (
     <ButtonAnOrderWraperStyled>
-      <ButtonAnOrderStyled onClick={handleClick}>
+      <ButtonAnOrderStyled onClick={handleClick} type="submit">
         Make an order
       </ButtonAnOrderStyled>
     </ButtonAnOrderWraperStyled>

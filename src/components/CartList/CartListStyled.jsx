@@ -16,10 +16,8 @@ export const CardItemStyle = styled.li`
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
-  :not(:last-child) {
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
+  padding-bottom: 10px;
+  padding-top: 10px;
   :hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.2),
       0px 1px 3px rgba(0, 0, 0, 0.4);
@@ -27,9 +25,8 @@ export const CardItemStyle = styled.li`
   }
   @media (min-width: 768px) {
     flex-direction: row;
-    :not(:last-child) {
-      margin-bottom: 0px;
-    }
+    padding-bottom: 0px;
+    padding-top: 0px;
     margin-left: auto;
     margin-right: auto;
   }

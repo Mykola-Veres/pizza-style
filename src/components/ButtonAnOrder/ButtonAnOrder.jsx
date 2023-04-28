@@ -1,7 +1,5 @@
-import {
-  ButtonAnOrderStyled,
-  ButtonAnOrderWraperStyled,
-} from './ButtonAnOrderStyled';
+import Button from 'components/Button/CustomButton';
+import { ButtonAnOrderWraperStyled } from './ButtonAnOrderStyled';
 import { useDispatch } from 'react-redux';
 import { clearPizzasInCart } from 'redux/cart/reducer';
 
@@ -14,9 +12,9 @@ export default function ButtonAnOrder() {
 
   return (
     <ButtonAnOrderWraperStyled>
-      <ButtonAnOrderStyled onClick={handleClick} type="submit">
+      <Button onClick={handleClick} type="submit">
         Make an order
-      </ButtonAnOrderStyled>
+      </Button>
     </ButtonAnOrderWraperStyled>
   );
 }

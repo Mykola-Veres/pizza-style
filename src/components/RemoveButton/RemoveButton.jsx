@@ -1,10 +1,9 @@
-import {
-  ButtonRemoveStyled,
-  ButtonRemoveWraperStyled,
-} from './RemoveButtonStyled';
+import { ButtonRemoveWraperStyled } from './RemoveButtonStyled';
 import { useDispatch } from 'react-redux';
 import { removePizzaFromCart } from 'redux/cart/reducer';
 import PropTypes from 'prop-types';
+import Button from 'components/Button/CustomButton';
+import { theme } from 'common/Theme';
 
 export default function RemoveButton({ pizza }) {
   const dispatch = useDispatch();
@@ -15,7 +14,15 @@ export default function RemoveButton({ pizza }) {
 
   return (
     <ButtonRemoveWraperStyled>
-      <ButtonRemoveStyled onClick={handleClick}>Remove</ButtonRemoveStyled>
+      <Button
+        onClick={handleClick}
+        fontSize={theme.sizes.small}
+        bgColorHover={theme.colors.mainBlack}
+        borderColorHover="#b70d0d"
+        padding="12px 16px"
+      >
+        Remove
+      </Button>
     </ButtonRemoveWraperStyled>
   );
 }

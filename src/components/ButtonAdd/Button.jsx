@@ -5,7 +5,7 @@ import { deletePizzaFromCart, setPizzaInCart } from 'redux/cart/reducer';
 import { Plus } from 'assets/Plus';
 import { Minus } from 'assets/Minus';
 import {
-  ButtonConteinerStyled,
+  ButtonContainerStyled,
   ButtonMinusStyled,
   ButtonPlusMinusStyled,
   ButtonStyled,
@@ -37,7 +37,7 @@ export default function Button(props) {
   return (
     <>
       {btnShow ? (
-        <ButtonConteinerStyled>
+        <ButtonContainerStyled>
           <ButtonPlusMinusStyled onClick={handleClickPlus}>
             <ButtonSvgStyled>
               <Plus />
@@ -48,7 +48,7 @@ export default function Button(props) {
               <Minus />
             </ButtonSvgStyled>
           </ButtonMinusStyled>
-        </ButtonConteinerStyled>
+        </ButtonContainerStyled>
       ) : (
         <ButtonStyled onClick={handleClick}>{props.children}</ButtonStyled>
       )}

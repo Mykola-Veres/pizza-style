@@ -50,7 +50,7 @@ export const ButtonMinusStyled = styled.button`
   }
 `;
 
-export const ButtonConteinerStyled = styled.div`
+export const ButtonContainerStyled = styled.div`
   display: block;
 `;
 

@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { deletePizzaFromCart, setPizzaInCart } from 'redux/cart/reducer';
+import { Plus } from 'assets/Plus';
+import { Minus } from 'assets/Minus';
 import {
   ButtonConteinerStyled,
   ButtonMinusStyled,
@@ -6,11 +11,6 @@ import {
   ButtonStyled,
   ButtonSvgStyled,
 } from './ButtonStyle';
-import { useDispatch, useSelector } from 'react-redux';
-import { deletePizzaFromCart, setPizzaInCart } from 'redux/cart/reducer';
-import PropTypes from 'prop-types';
-import { Plus } from 'assets/Plus';
-import { Minus } from 'assets/Minus';
 
 export default function Button(props) {
   const [btnShow, setBtnShow] = useState(props.btnShow);

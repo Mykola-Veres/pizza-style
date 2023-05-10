@@ -26,6 +26,16 @@ export const CardItemStyle = styled.li`
       0px 1px 3px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
   }
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 
 export const CardImgWrapperStyle = styled.div`
@@ -63,8 +73,10 @@ export const CardTextStyle = styled.p`
   margin-left: auto;
   margin-right: auto;
   width: 220px;
+  height: 72px;
   margin-bottom: 10px;
   font-style: italic;
+  overflow: auto;
 `;
 
 export const CardPriceStyle = styled.p`

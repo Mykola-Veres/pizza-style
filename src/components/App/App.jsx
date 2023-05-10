@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Loader from '../Loader';
 import { Suspense, lazy } from 'react';
+import Loader from '../Loader';
 import MainContainer from 'components/MainContainer/MainContainer';
 import { GlobalStyle } from 'common/GlobalStyle';
 

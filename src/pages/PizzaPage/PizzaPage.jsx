@@ -1,17 +1,21 @@
+import { ToTop } from '../../components/ScrollToTop/ScrollToTop';
 import Header from 'components/Header/Header';
 import CardList from 'components/CardPizzaPage/CardList';
 import {
   PizzaConteinerStyled,
   PizzaPageConteinerStyled,
+  PizzaPageMainTitleStyled,
 } from './PizzaPageStaled';
-import { ToTop } from '../../components/ScrollToTop/ScrollToTop';
 
 export default function PizzaPage() {
   return (
     <PizzaConteinerStyled>
       <Header />
       <PizzaPageConteinerStyled>
-        <CardList />
+        <section>
+          <PizzaPageMainTitleStyled>Pizza Page</PizzaPageMainTitleStyled>
+          <CardList />
+        </section>
       </PizzaPageConteinerStyled>
       <ToTop />
     </PizzaConteinerStyled>

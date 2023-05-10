@@ -1,6 +1,6 @@
+import { useDispatch } from 'react-redux';
 import Button from 'components/Button/CustomButton';
 import { ButtonAnOrderWraperStyled } from './ButtonAnOrderStyled';
-import { useDispatch } from 'react-redux';
 import { clearPizzasInCart } from 'redux/cart/reducer';
 
 export default function ButtonAnOrder() {

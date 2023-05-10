@@ -1,9 +1,9 @@
-import { ButtonRemoveWraperStyled } from './RemoveButtonStyled';
 import { useDispatch } from 'react-redux';
-import { removePizzaFromCart } from 'redux/cart/reducer';
 import PropTypes from 'prop-types';
+import { removePizzaFromCart } from 'redux/cart/reducer';
 import Button from 'components/Button/CustomButton';
 import { theme } from 'common/Theme';
+import { ButtonRemoveWraperStyled } from './RemoveButtonStyled';
 
 export default function RemoveButton({ pizza }) {
   const dispatch = useDispatch();

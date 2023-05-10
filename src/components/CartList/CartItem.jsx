@@ -1,4 +1,7 @@
+import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import Button from 'components/ButtonAdd/Button';
+import RemoveButton from 'components/RemoveButton/RemoveButton';
 import {
   CardImgStyle,
   CardImgWrapperStyle,
@@ -8,9 +11,6 @@ import {
   CardTitleStyle,
   PizzaCountStyled,
 } from './CartListStyled';
-import { useSelector } from 'react-redux';
-import RemoveButton from 'components/RemoveButton/RemoveButton';
-import PropTypes from 'prop-types';
 
 export default function CartItem({ pizza }) {
   const pizzas = useSelector(state => state.cart.pizzasInCart);
@@ -21,7 +21,7 @@ export default function CartItem({ pizza }) {
         <CardItemStyle>
           <CardTitleStyle>{pizza.title}</CardTitleStyle>
           <CardImgWrapperStyle>
-            <CardImgStyle src={pizza.image} alt="pizza" />
+            <CardImgStyle src={pizza.image} alt={pizza.title} loading="lazy" />
           </CardImgWrapperStyle>
           <CardTextStyle>{pizza.description}</CardTextStyle>
           <CardPriceStyle>Price: {pizza.price} UAH</CardPriceStyle>

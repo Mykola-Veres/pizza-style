@@ -1,5 +1,5 @@
-import { TotalCountStyled } from './TotalCountStyled';
 import PropTypes from 'prop-types';
+import { TotalCountStyled } from './TotalCountStyled';
 
 export default function TotalCount({ pizzas }) {
   const totalCount = pizzas.reduce((acc, pizza) => acc + pizza.count, 0);

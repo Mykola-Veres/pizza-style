@@ -16,6 +16,9 @@ export const ButtonStyled = styled.button`
   font-weight: 600;
   font-style: italic;
   margin-bottom: 8px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const ButtonPlusMinusStyled = styled.button`

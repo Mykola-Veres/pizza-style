@@ -1,5 +1,5 @@
-import { HeaderListStyle, HeaderItemStyled } from './NavHeaderStyleds';
 import NavLinkPizza from 'components/NavLinkPizza/NavLinkPizza';
+import { HeaderListStyle, HeaderItemStyled } from './NavHeaderStyleds';
 
 export default function NavHeader() {
   return (

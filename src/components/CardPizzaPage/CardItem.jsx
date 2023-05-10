@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Button from 'components/ButtonAdd/Button';
 import {
   CardImgStyle,
@@ -7,14 +8,13 @@ import {
   CardTextStyle,
   CardTitleStyle,
 } from './CardStyle';
-import PropTypes from 'prop-types';
 
 function CardItem({ product }) {
   return (
     <CardItemStyle>
       <CardTitleStyle>{product.title}</CardTitleStyle>
       <CardImgWrapperStyle>
-        <CardImgStyle src={product.image} alt="pizza" />
+        <CardImgStyle src={product.image} alt={product.title} loading="lazy" />
       </CardImgWrapperStyle>
       <CardTextStyle>{product.description}</CardTextStyle>
       <CardPriceStyle>Price: {product.price} UAH</CardPriceStyle>

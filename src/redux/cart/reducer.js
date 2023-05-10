@@ -24,7 +24,7 @@ const cartSlice = createSlice({
       const findPizza = state.pizzasInCart.find(
         pizza => pizza.id === action.payload.id
       );
-      if (!findPizza.count < 1) {
+      if (findPizza.count >= 1) {
         findPizza.count -= 1;
         state.totalPrice -= action.payload.price;
       } else {

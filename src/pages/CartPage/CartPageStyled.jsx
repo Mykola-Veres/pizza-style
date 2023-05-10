@@ -11,7 +11,7 @@ export const CartConteinerStyled = styled.div`
   }
 `;
 
-export const CartPageConteinerStyled = styled.div`
-  padding-bottom: 100px;
+export const CartPageConteinerStyled = styled.main`
+  padding-bottom: 250px;
   padding-top: 40px;
 `;
